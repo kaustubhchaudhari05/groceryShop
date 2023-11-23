@@ -1,0 +1,5 @@
+package com.hp.grcoeryshop.controller;
+
+public class Category {
+
+}

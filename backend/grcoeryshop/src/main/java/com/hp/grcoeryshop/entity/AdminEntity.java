@@ -21,7 +21,7 @@ public class AdminEntity {
 	private long adminId;
 	private String firstName;
 	private String lastName;
-	private long contact;
+	private long contactNo;
 	private String email;
 	private String gender;
 	private LocalDate dob;

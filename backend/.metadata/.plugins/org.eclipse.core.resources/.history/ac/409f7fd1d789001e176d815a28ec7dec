@@ -1,0 +1,20 @@
+package com.hp.grcoeryshop.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hp.grcoeryshop.entity.AdminEntity;
+import com.hp.grcoeryshop.repository.AdminRepository;
+
+@Service
+public class AdminService {
+	
+	@Autowired
+	private AdminRepository adminRepository;
+	
+	public AdminEntity save(AdminEntity adminEntity) {
+		AdminEntity adminEntity2 = adminRepository.save(adminEntity);
+		return adminEntity2;
+	}
+
+}

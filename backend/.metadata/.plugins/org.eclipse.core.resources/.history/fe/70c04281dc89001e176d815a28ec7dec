@@ -1,0 +1,19 @@
+package com.hp.grcoeryshop.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hp.grcoeryshop.entity.CustomerEntity;
+import com.hp.grcoeryshop.repository.CustomerRepository;
+
+@Service
+public class CustomerService {
+
+	@Autowired 
+	private CustomerRepository customerRepository;
+	
+	public CustomerEntity save(CustomerEntity customerEntity) {
+		CustomerEntity customerEntity2 = customerRepository.save(customerEntity);
+		return customerEntity2;
+	}
+}

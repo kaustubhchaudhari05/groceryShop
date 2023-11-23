@@ -1,25 +1,33 @@
 package com.hp.grcoeryshop.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hp.grcoeryshop.dto.AdminDto;
 import com.hp.grcoeryshop.entity.AdminEntity;
-import com.hp.grcoeryshop.repository.AdminRepository;
+import com.hp.grcoeryshop.service.AdminService;
 
 @RestController
 @RequestMapping("/admin")
 public class Admin {
 	
 	@Autowired
-	private AdminRepository adminRepository;
+	private AdminService adminService;
 	
 	@PostMapping("/save")
 	public AdminEntity saveAdmin(@RequestBody AdminEntity adminEntity) {
-		AdminEntity adminEntity2 = adminRepository.save(adminEntity);
-		return adminEntity2;
+		return adminService.save(adminEntity);
+	}
+	
+	@GetMapping("/get")
+	public ArrayList<AdminDto> getAdmin(){
+		return adminService.getAdmin();
 	}
 
 }

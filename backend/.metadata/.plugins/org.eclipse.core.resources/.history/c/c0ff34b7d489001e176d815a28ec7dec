@@ -1,0 +1,5 @@
+package com.hp.grcoeryshop.service;
+
+public class CategoryService {
+
+}
