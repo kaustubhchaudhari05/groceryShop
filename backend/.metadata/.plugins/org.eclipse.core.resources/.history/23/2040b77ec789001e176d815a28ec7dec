@@ -1,0 +1,5 @@
+package com.hp.grcoeryshop.repository;
+
+public interface AdminRepository {
+
+}
