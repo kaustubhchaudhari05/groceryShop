@@ -1,8 +1,10 @@
 package com.hp.grcoeryshop.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +17,7 @@ import com.hp.grcoeryshop.service.EmployeeService;
 
 @RestController
 @RequestMapping("/employee")
+@CrossOrigin("http://localhost:4200")
 public class Employee {
 	
 	@Autowired
@@ -28,6 +31,11 @@ public class Employee {
 	@GetMapping("/get")
 	public ArrayList<EmployeeDto> getEmployee(){
 		return employeeService.get();
+	}
+	
+	@GetMapping("/getp")
+	public List<EmployeeEntity> getp(){
+		return employeeService.getP();
 	}
 
 }

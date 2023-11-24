@@ -47,4 +47,8 @@ public class CustomerService {
 		
 		return dtos;
 	}
+	
+	public List<CustomerEntity> getP(){
+		return customerRepository.findAll();
+	}
 }

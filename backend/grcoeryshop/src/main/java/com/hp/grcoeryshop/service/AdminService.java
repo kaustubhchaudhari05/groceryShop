@@ -47,5 +47,9 @@ public class AdminService {
 		}
 		return adminDtos;
 	}
+	
+	public List<AdminEntity> getP(){
+		return adminRepository.findAll();
+	}
 
 }

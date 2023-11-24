@@ -47,4 +47,8 @@ public class EmployeeService {
 		}
 		return dtos;
 	}
+	
+	public List<EmployeeEntity> getP(){
+		return employeeRepository.findAll();
+	}
 }
