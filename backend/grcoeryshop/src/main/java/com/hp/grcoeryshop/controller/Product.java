@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hp.grcoeryshop.entity.ProductEntity;
+import com.hp.grcoeryshop.repository.ProductRepository;
 import com.hp.grcoeryshop.service.ProductService;
 
 @RestController
@@ -24,6 +25,9 @@ public class Product {
 	@Autowired
 	private ProductService productService;
 	
+	@Autowired
+	private ProductRepository productRepository;
+	
 	@PostMapping("/save")
 	public ProductEntity saveProduct(@RequestBody ProductEntity productEntity) {
 		return productService.save(productEntity);
@@ -32,6 +36,17 @@ public class Product {
 	@GetMapping("/get")
 	public List<ProductEntity> getProduct(){
 		return productService.get();
+	}
+	
+	@GetMapping("/get/{productId}")
+	public ProductEntity getById(@PathVariable("productId") Long productId){
+		ProductEntity entity= productRepository.findById(productId).get();
+		return entity;
+	}
+	
+	@GetMapping("/{categoryId}")
+	public List<ProductEntity> getByCategoryId(@PathVariable("categoryId") Long categoryId){
+		return productService.getByCategoryId(categoryId);
 	}
 	
 	@PutMapping("/{productId}")

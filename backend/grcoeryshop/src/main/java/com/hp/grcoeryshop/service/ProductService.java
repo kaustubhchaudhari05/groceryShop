@@ -24,6 +24,10 @@ public class ProductService {
 		return productRepository.findAll();
 	}
 	
+	public List<ProductEntity> getByCategoryId(Long CategoryId){
+		return productRepository.findByCategoryId(CategoryId);
+	}
+	
 	public ProductEntity update(Long productId, ProductEntity productEntity) {
 		Optional<ProductEntity> getProduct =  productRepository.findById(productId);
 		if(getProduct.isPresent()) {
