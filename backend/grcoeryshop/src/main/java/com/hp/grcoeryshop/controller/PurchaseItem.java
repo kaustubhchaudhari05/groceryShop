@@ -13,22 +13,22 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hp.grcoeryshop.entity.PurchaseItemEntity;
 import com.hp.grcoeryshop.service.PurchaseItemService;
 
-@RestController
+@RestController  
 @RequestMapping("/item")
 @CrossOrigin("http://localhost:4200")
 public class PurchaseItem {
-	
+
 	@Autowired
-	private PurchaseItemService purchaseItemService;
+	private PurchaseItemService itemService;
 	
 	@PostMapping("/save")
-	public PurchaseItemEntity saveItem(@RequestBody PurchaseItemEntity purchaseItemEntity) {
-		return purchaseItemService.save(purchaseItemEntity);
+	public PurchaseItemEntity saveItem(@RequestBody PurchaseItemEntity itemEntity) {
+		return itemService.save(itemEntity);
 	}
 	
 	@GetMapping("/get")
 	public List<PurchaseItemEntity> getItem(){
-		return purchaseItemService.get();
+		return itemService.get();
 	}
-
+	
 }

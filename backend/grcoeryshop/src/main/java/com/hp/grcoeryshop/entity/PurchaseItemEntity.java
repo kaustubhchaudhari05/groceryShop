@@ -9,12 +9,12 @@ import lombok.Data;
 @Entity
 @Data
 public class PurchaseItemEntity {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long purchaseItemId;
-	private long customerId;
+	private long itemid;
 	private long productId;
-	private int quantity;
-
+	private int productQuantity;
+	private long purchaseid;
 }
+  
