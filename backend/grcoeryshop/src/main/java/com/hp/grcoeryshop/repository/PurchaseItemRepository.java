@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.hp.grcoeryshop.entity.PurchaseItemEntity;
 
 @Repository
-public interface PurchaseItemRepository extends JpaRepository<PurchaseItemEntity, Long> {
+public interface PurchaseItemRepository extends JpaRepository<PurchaseItemEntity, Long>{
 
 }

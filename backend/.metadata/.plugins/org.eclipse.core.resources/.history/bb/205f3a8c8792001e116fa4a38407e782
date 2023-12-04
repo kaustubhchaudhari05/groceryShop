@@ -1,0 +1,5 @@
+package com.hp.grcoeryshop.entity;
+
+public class PurchaseList {
+
+}

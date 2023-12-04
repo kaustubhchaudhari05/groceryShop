@@ -10,17 +10,16 @@ import com.hp.grcoeryshop.repository.PurchaseItemRepository;
 
 @Service
 public class PurchaseItemService {
-	
+
 	@Autowired
 	private PurchaseItemRepository itemRepository;
 	
-	public PurchaseItemEntity save(PurchaseItemEntity purchaseItemEntity) {
-		PurchaseItemEntity purchaseItemEntity2 = itemRepository.save(purchaseItemEntity);
-		return purchaseItemEntity2;
+	public PurchaseItemEntity save(PurchaseItemEntity itemEntity) {
+		PurchaseItemEntity itemEntity2 = itemRepository.save(itemEntity);
+		return itemEntity2;
 	}
 	
-	public List<PurchaseItemEntity> get(){
+	public List<PurchaseItemEntity> get() {
 		return itemRepository.findAll();
 	}
-
 }
