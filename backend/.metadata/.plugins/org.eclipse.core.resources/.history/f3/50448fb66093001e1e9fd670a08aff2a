@@ -1,0 +1,63 @@
+package com.hp.grcoeryshop;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.LocalDate;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hp.grcoeryshop.entity.AdminEntity;
+import com.hp.grcoeryshop.repository.AdminRepository;
+import com.hp.grcoeryshop.service.AdminService;
+
+@SpringBootTest
+public class AdminTestService {
+	
+	@Mock
+	private AdminRepository adminRepository;
+
+	@Autowired
+	private AdminService adminService;
+	
+	@Test
+	void createUser() throws Exception {
+//		String url = "./admin/save";
+		
+		AdminEntity adminEntity = new AdminEntity();
+		adminEntity.setAdminId(1);
+		adminEntity.setFirstName("abc");
+		adminEntity.setLastName("xyz");
+		adminEntity.setEmail("abc@gmail.com");
+		adminEntity.setContactNo(741258963);
+//		adminEntity.setDob(LocalDate.now());
+		adminEntity.setGender("male");
+		adminEntity.setUsername("abc05");
+		adminEntity.setPassword("abc@0502");
+		
+//		String inputJson = super.
+		
+//		AdminEntity adminEntity2 = adminService.save(adminEntity);
+	
+		assertThat(adminService.save(adminEntity));
+	}
+	
+	@Test
+	void getAllUserDto() throws Exception {
+//		adminService.getAdmin();
+		assertThat(adminService.getAdmin());
+	}
+	
+	@Test
+	void getAllUser() throws Exception {
+		
+		assertThat(adminService.getP());
+	}
+	
+	@Test
+	void contextLoads() throws Exception {
+		assertThat(adminRepository).isNotNull();
+	}
+}

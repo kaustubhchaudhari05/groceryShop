@@ -18,8 +18,9 @@ public class AdminService {
 	private AdminRepository adminRepository;
 	
 	public AdminEntity save(AdminEntity adminEntity) {
-		AdminEntity adminEntity2 = adminRepository.save(adminEntity);
-		return adminEntity2;
+		//AdminEntity adminEntity2 = *// 
+		return adminRepository.save(adminEntity);
+//		return adminEntity2;
 	}
 	
 	public ArrayList<AdminDto> getAdmin(){

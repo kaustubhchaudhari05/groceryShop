@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CategoryTestService" project="grcoeryshop" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hp.grcoeryshop.CategoryTestService" time="0.884" displayname="CategoryTestService" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.CategoryTestService]">
+    <testcase name="getAllCategory" classname="com.hp.grcoeryshop.CategoryTestService" time="0.845" displayname="getAllCategory()" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.CategoryTestService]/[method:getAllCategory()]"/>
+    <testcase name="createCategory" classname="com.hp.grcoeryshop.CategoryTestService" time="0.039" displayname="createCategory()" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.CategoryTestService]/[method:createCategory()]"/>
+  </testsuite>
+</testrun>

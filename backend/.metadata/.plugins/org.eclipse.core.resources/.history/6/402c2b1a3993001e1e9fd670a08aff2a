@@ -1,0 +1,32 @@
+package com.hp.grcoeryshop;
+
+import static org.mockito.Mockito.verify;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hp.grcoeryshop.repository.AdminRepository;
+import com.hp.grcoeryshop.service.AdminService;
+
+@SpringBootTest
+public class AdminTestService {
+	
+	@Mock
+	private AdminRepository adminRepository;
+
+	@Autowired
+	private AdminService adminService;
+	
+	@Test
+	void createUser() {
+		
+	}
+	
+	@Test
+	void getAllUser() {
+		adminService.getP();
+		verify(adminRepository.findAll());
+	}
+}
