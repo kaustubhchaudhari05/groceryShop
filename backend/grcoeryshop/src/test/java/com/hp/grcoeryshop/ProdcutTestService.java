@@ -1,0 +1,60 @@
+package com.hp.grcoeryshop;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hp.grcoeryshop.entity.ProductEntity;
+import com.hp.grcoeryshop.service.ProductService;
+
+@SpringBootTest
+public class ProdcutTestService {
+
+	@Autowired
+	private ProductService productService;
+	
+	@Test
+	void createProduct() throws Exception {
+		ProductEntity productEntity = new ProductEntity();
+		
+		productEntity.setProductId(1);
+		productEntity.setProductName("car");
+		productEntity.setProductQuantity(25);
+		productEntity.setProductPrice(2000);
+		productEntity.setCategoryId(1);
+		
+		productService.save(productEntity);
+	}
+	
+	@Test
+	void getAllPoduct() throws Exception {
+		assertThat(productService.get());
+	}
+	
+	@Test
+	void getByCategoryId() throws Exception {
+		assertThat(productService.getByCategoryId(1l));
+	}
+	
+	@Test
+	void deleteProduct() throws Exception {
+		assertThat(productService.delete(1l));
+	}
+	
+	@Test
+	void updateProduct() throws Exception {
+		long productId = 16;
+		ProductEntity productEntity = new ProductEntity();
+		productEntity.setProductName("bike");
+		productEntity.setProductPrice(1500);
+		productEntity.setProductQuantity(20);
+		
+		assertThat(productService.update(productId, productEntity));
+	}
+//	@Test
+//	void get
+	
+	
+}

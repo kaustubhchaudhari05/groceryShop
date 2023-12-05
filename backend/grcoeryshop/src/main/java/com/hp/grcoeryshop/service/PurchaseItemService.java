@@ -22,4 +22,6 @@ public class PurchaseItemService {
 	public List<PurchaseItemEntity> get() {
 		return itemRepository.findAll();
 	}
+	
+//	public List<PurchaseItemEntity> getByPurchaseId(long)
 }

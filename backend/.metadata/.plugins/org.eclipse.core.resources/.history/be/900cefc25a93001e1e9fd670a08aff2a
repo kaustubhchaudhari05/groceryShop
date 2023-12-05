@@ -1,0 +1,21 @@
+package com.hp.grcoeryshop;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hp.grcoeryshop.service.EmployeeService;
+
+@SpringBootTest
+public class EmployeeTestService {
+
+	@Autowired
+	private EmployeeService employeeService;
+	
+	@Test
+	void getAllEmployeeDtos() throws Exception {
+		assertThat(employeeService.get());
+	}
+}

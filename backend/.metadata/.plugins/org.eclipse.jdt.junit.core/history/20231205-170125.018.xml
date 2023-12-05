@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CustomerTestService" project="grcoeryshop" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hp.grcoeryshop.CustomerTestService" time="0.645" displayname="CustomerTestService" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.CustomerTestService]">
+    <testcase name="getAllCustomer" classname="com.hp.grcoeryshop.CustomerTestService" time="0.633" displayname="getAllCustomer()" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.CustomerTestService]/[method:getAllCustomer()]"/>
+    <testcase name="getAllCustomerDto" classname="com.hp.grcoeryshop.CustomerTestService" time="0.01" displayname="getAllCustomerDto()" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.CustomerTestService]/[method:getAllCustomerDto()]"/>
+  </testsuite>
+</testrun>

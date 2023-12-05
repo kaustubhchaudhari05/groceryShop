@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PurchaseItemTestService" project="grcoeryshop" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hp.grcoeryshop.PurchaseItemTestService" time="0.67" displayname="PurchaseItemTestService" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.PurchaseItemTestService]">
+    <testcase name="get" classname="com.hp.grcoeryshop.PurchaseItemTestService" time="0.601" displayname="get()" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.PurchaseItemTestService]/[method:get()]"/>
+    <testcase name="createItem" classname="com.hp.grcoeryshop.PurchaseItemTestService" time="0.068" displayname="createItem()" uniqueid="[engine:junit-jupiter]/[class:com.hp.grcoeryshop.PurchaseItemTestService]/[method:createItem()]"/>
+  </testsuite>
+</testrun>

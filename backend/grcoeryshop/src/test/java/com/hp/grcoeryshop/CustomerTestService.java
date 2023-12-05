@@ -1,0 +1,44 @@
+package com.hp.grcoeryshop;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.LocalDate;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hp.grcoeryshop.entity.CustomerEntity;
+import com.hp.grcoeryshop.service.CustomerService;
+
+@SpringBootTest
+public class CustomerTestService {
+
+	@Autowired
+	private CustomerService customerService;
+	
+	@Test
+	void createCustomer() throws Exception {
+		CustomerEntity customerEntity = new CustomerEntity();
+		customerEntity.setFirstName("mayu");
+		customerEntity.setLastName("meshram");
+		customerEntity.setContact(522366988);
+		customerEntity.setDob(LocalDate.of(1997, 12, 17));
+		customerEntity.setEmail("mayu@gmail.com");
+		customerEntity.setGender("male");
+		customerEntity.setUsername("mayu17");
+		customerEntity.setPassword("mayu1712");
+		
+		assertThat(customerService.save(customerEntity));
+	}
+	
+	@Test
+	void getAllCustomer() throws Exception {
+		assertThat(customerService.getP());
+	}
+	
+	@Test
+	void getAllCustomerDto() throws Exception {
+		assertThat(customerService.get());
+	}
+}

@@ -1,0 +1,39 @@
+package com.hp.grcoeryshop;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hp.grcoeryshop.entity.CategoryEntity;
+import com.hp.grcoeryshop.service.CategoryService;
+
+@SpringBootTest
+public class CategoryTestService {
+
+	@Autowired
+	private CategoryService categoryService;
+	
+	@Test
+	void createCategory() throws Exception {
+		CategoryEntity categoryEntity = new CategoryEntity();
+		categoryEntity.setCategoryId(1);
+		categoryEntity.setCategoryName("Toys");
+		
+		categoryService.save(categoryEntity);
+	}
+	
+	@Test
+	void getAllCategory() throws Exception {
+		assertThat(categoryService.get());
+	}
+	
+	@Test
+	void deleteCategory() throws Exception {
+		assertThat(categoryService.delete(1l));
+	}
+	
+	
+	
+}
